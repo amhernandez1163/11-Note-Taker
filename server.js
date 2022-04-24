@@ -1,11 +1,11 @@
+// dependencies and required packages/routes
 const express = require("express");
 const fs = require("fs");
 const notes = require("./db/db.json");
 const path = require("path");
-// const { saveNote } = require("./db/noteFunctions");
 var uuidv1 = require("uuidv1");
-// console.log(uuidv1())
 
+// Port declared and express envoked as app
 const PORT = process.env.PORT || 3001;
 const app = express();
 
@@ -39,6 +39,7 @@ app.post("/api/notes", (req, res) => {
   res.json(notes);
 });
 
+// "catch all for url - will direct back to index"
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./public/index.html"));
 });
