@@ -3,5 +3,10 @@
     "title": "Test Title",
     "text": "Initial note provided by starter code",
     "id": 1
+  },
+  {
+    "title": "Scorpions",
+    "text": "buff scorpions - they're weak. D tier predator. ",
+    "id": "f994eaa0-c357-11ec-87b7-3d8614ea135a"
   }
 ]

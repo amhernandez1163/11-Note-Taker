@@ -29,12 +29,12 @@ app.post("/api/notes", (req, res) => {
   const savedNote = fs.readFileSync(path.join(__dirname, "./db/db.json"));
   const parseNote = JSON.parse(savedNote);
   console.log(req.body);
-  req.body.id = uuidv1;
+  req.body.id = uuidv1();
   parseNote.push(req.body);
 
   fs.writeFileSync(
     path.join(__dirname, "./db/db.json"),
-    JSON.stringify(parseNote)
+    JSON.stringify(parseNote, null, 2)
   );
   res.json(notes);
 });
